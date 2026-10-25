@@ -1,0 +1,85 @@
+/* Simple starter styles — customize freely */
+:root {
+    --red: #c62828;
+    --red-dark: #a61f1f;
+    --grey-light: #f2f2f2;
+    --grey: #d9d9d9;
+    --grey-dark: #555555;
+    --white: #ffffff;
+    --text: #292929;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--grey-light);
+}
+
+header {
+    background: var(--red);
+    padding: 1rem;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--red-dark);
+}
+
+main {
+    width: min(900px, calc(100% - 2rem));
+    margin: 2rem auto;
+    text-align: center;
+}
+
+h1 {
+    color: var(--red);
+    margin-bottom: 1.5rem;
+}
+
+.example-box {
+    max-width: 650px;
+    min-height: 100px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 6px;
+    color: var(--grey-dark);
+}
+
+/* A simple responsive adjustment for smaller screens */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        margin-top: 1.25rem;
+    }
+}
