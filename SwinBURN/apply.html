@@ -1,32 +1,510 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apply for a technical or user experience role at SwinBURN, an online retail platform hiring in Australia and Vietnam."
+    />
+    <meta name="author" content="Nhat Nam" />
+    <title>Apply | SwinBURN</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Embedded CSS example (page-specific, kept short on purpose) -->
+    <style>
+      .form-hint {
+        font-size: 0.85rem;
+        color: #555555;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+        Some parts of this code were generated or adapted using Claude (Anthropic, Claude Sonnet 5.5, October 2026).
+        All code was reviewed, tested and adjusted by the author (Nhat Nam) before submission.
+    -->
+
     <header>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="apply.html">Apply</a>
-        </nav>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="apply.html" aria-current="page">Apply</a>
+      </nav>
     </header>
 
     <main>
-        <h1>Apply Page</h1>
+      <h1>Apply to SwinBURN</h1>
+      <p>
+        Ready to help shape the future of online retail? SwinBURN is hiring in
+        Vietnam and Australia. Fill in the form below to apply for one of our
+        technical or user experience roles. You can find the job reference
+        number on the <a href="jobs.html">Jobs page</a>. All fields except
+        "Other skills" are required.
+      </p>
 
-        <!-- Example boxes: replace this placeholder text with your own content. -->
-        <section class="example-box">
-            Example text box — replace or remove this.
-        </section>
+      <!-- Inline CSS example: border colour set directly on this element -->
+      <section
+        class="inclusion-note"
+        aria-labelledby="inclusion-heading"
+        style="border-left: 6px solid #c0392b"
+      >
+        <h2 id="inclusion-heading">Our commitment to inclusion</h2>
+        <p>
+          SwinBURN is an online retail company with teams and applicants in both
+          Vietnam and Australia. Because of this, we acknowledge the First
+          Peoples of both countries on this page, which is where new team
+          members first meet us. We encourage applications from Aboriginal and
+          Torres Strait Islander peoples in Australia and from people of all 54
+          ethnic groups in Vietnam, and we are working towards a workplace and
+          an online platform that are accessible, culturally safe and welcoming
+          to everyone.
+        </p>
 
-        <section class="example-box">
-            Another example text box — customize me.
-        </section>
+        <h3>Acknowledgement of Country (Australia)</h3>
+        <p>
+          SwinBURN acknowledges the Traditional Owners of the lands on which we
+          live and work across Australia, and pays respect to Elders past and
+          present. We recognise the continuing connection of Aboriginal and
+          Torres Strait Islander peoples to land, waters and community, and we
+          are committed to reconciliation and to supporting First Nations
+          communities.
+        </p>
+
+        <h3>Acknowledgement of Country (Vietnam)</h3>
+        <p>
+          We honour and celebrate the rich tapestry of Vietnam's Indigenous
+          peoples, encompassing 54 distinct ethnic groups, including the Kinh,
+          Tay, Thai, Muong, Co Tu, Ede, Khmer, Hmong, Cham and many others,
+          whose ancestral stewardship of this land spans millennia.
+        </p>
+        <p>
+          We pay our deepest respect to our ancestors past, present and future
+          for preserving Vietnam's cultures, history, timeless traditions and
+          deep spiritual connection to its mountains, rivers, seas and forests.
+        </p>
+        <p>
+          We recognise their enduring heritage, resilience and invaluable
+          contributions to the nation's diverse identity, committing to learn
+          from and uplift their stories with reverence and gratitude.
+        </p>
+      </section>
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Job application form</h2>
+
+        <form
+          id="apply-form"
+          action="https://mercury.swin.edu.au/it000000/formtest.php"
+          method="post"
+        >
+          <fieldset class="form-section">
+            <legend>Position</legend>
+            <div class="form-row">
+              <label for="jobref">Job reference number</label>
+              <input
+                type="text"
+                id="jobref"
+                name="jobref"
+                pattern="[A-Za-z0-9]{5}"
+                maxlength="5"
+                minlength="5"
+                placeholder="e.g. EC001"
+                aria-describedby="jobref-hint"
+                title="Exactly 5 letters or numbers"
+                required
+              />
+              <span id="jobref-hint" class="form-hint"
+                >Exactly 5 letters or numbers.</span
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Personal details</legend>
+
+            <!-- \p{L} matches any letter, so Vietnamese names with accents (e.g. Nguyễn) are accepted -->
+            <div class="form-row">
+              <label for="firstname">First name</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                pattern="[\p{L} ]{1,20}"
+                maxlength="20"
+                autocomplete="given-name"
+                aria-describedby="firstname-hint"
+                title="Letters only, maximum 20 characters"
+                required
+              />
+              <span id="firstname-hint" class="form-hint"
+                >Letters only, maximum 20 characters.</span
+              >
+            </div>
+
+            <div class="form-row">
+              <label for="lastname">Last name</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                pattern="[\p{L} ]{1,20}"
+                maxlength="20"
+                autocomplete="family-name"
+                aria-describedby="lastname-hint"
+                title="Letters only, maximum 20 characters"
+                required
+              />
+              <span id="lastname-hint" class="form-hint"
+                >Letters only, maximum 20 characters.</span
+              >
+            </div>
+
+            <div class="form-row">
+              <label for="dob">Date of birth</label>
+              <input
+                type="text"
+                id="dob"
+                name="dob"
+                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                maxlength="10"
+                placeholder="dd/mm/yyyy"
+                aria-describedby="dob-hint"
+                title="Use the format dd/mm/yyyy"
+                required
+              />
+              <span id="dob-hint" class="form-hint">Format: dd/mm/yyyy</span>
+            </div>
+
+            <fieldset class="form-row radio-group">
+              <legend>Gender</legend>
+              <div class="radio-options">
+                <label for="gender-female">
+                  <input
+                    type="radio"
+                    id="gender-female"
+                    name="gender"
+                    value="female"
+                    required
+                  />
+                  Female
+                </label>
+                <label for="gender-male">
+                  <input
+                    type="radio"
+                    id="gender-male"
+                    name="gender"
+                    value="male"
+                  />
+                  Male
+                </label>
+                <label for="gender-other">
+                  <input
+                    type="radio"
+                    id="gender-other"
+                    name="gender"
+                    value="other"
+                  />
+                  Other
+                </label>
+                <label for="gender-nosay">
+                  <input
+                    type="radio"
+                    id="gender-nosay"
+                    name="gender"
+                    value="prefer-not-to-say"
+                  />
+                  Prefer not to say
+                </label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Address</legend>
+
+            <div class="form-row">
+              <label for="country">Country</label>
+              <select
+                id="country"
+                name="country"
+                autocomplete="country-name"
+                required
+              >
+                <option value="">Please select</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Australia">Australia</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="street">Street address</label>
+              <input
+                type="text"
+                id="street"
+                name="street"
+                maxlength="40"
+                autocomplete="street-address"
+                title="Maximum 40 characters"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="suburb">Suburb/Town</label>
+              <input
+                type="text"
+                id="suburb"
+                name="suburb"
+                maxlength="40"
+                autocomplete="address-level2"
+                title="Maximum 40 characters"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="state">State / Province / City</label>
+              <select
+                id="state"
+                name="state"
+                aria-describedby="state-hint"
+                required
+              >
+                <option value="">Please select</option>
+
+                <optgroup label="Australia (state or territory)">
+                  <option value="VIC">VIC</option>
+                  <option value="NSW">NSW</option>
+                  <option value="QLD">QLD</option>
+                  <option value="NT">NT</option>
+                  <option value="WA">WA</option>
+                  <option value="SA">SA</option>
+                  <option value="TAS">TAS</option>
+                  <option value="ACT">ACT</option>
+                </optgroup>
+
+                <optgroup label="Vietnam (centrally governed cities)">
+                  <option value="Ha Noi">Ha Noi</option>
+                  <option value="TP Ho Chi Minh">TP Ho Chi Minh</option>
+                  <option value="Hai Phong">Hai Phong</option>
+                  <option value="Da Nang">Da Nang</option>
+                  <option value="Hue">Hue</option>
+                  <option value="Can Tho">Can Tho</option>
+                </optgroup>
+
+                <optgroup label="Vietnam (provinces)">
+                  <option value="An Giang">An Giang</option>
+                  <option value="Bac Ninh">Bac Ninh</option>
+                  <option value="Ca Mau">Ca Mau</option>
+                  <option value="Cao Bang">Cao Bang</option>
+                  <option value="Dak Lak">Dak Lak</option>
+                  <option value="Dien Bien">Dien Bien</option>
+                  <option value="Dong Nai">Dong Nai</option>
+                  <option value="Dong Thap">Dong Thap</option>
+                  <option value="Gia Lai">Gia Lai</option>
+                  <option value="Ha Tinh">Ha Tinh</option>
+                  <option value="Hung Yen">Hung Yen</option>
+                  <option value="Khanh Hoa">Khanh Hoa</option>
+                  <option value="Lai Chau">Lai Chau</option>
+                  <option value="Lam Dong">Lam Dong</option>
+                  <option value="Lang Son">Lang Son</option>
+                  <option value="Lao Cai">Lao Cai</option>
+                  <option value="Nghe An">Nghe An</option>
+                  <option value="Ninh Binh">Ninh Binh</option>
+                  <option value="Phu Tho">Phu Tho</option>
+                  <option value="Quang Ngai">Quang Ngai</option>
+                  <option value="Quang Ninh">Quang Ninh</option>
+                  <option value="Quang Tri">Quang Tri</option>
+                  <option value="Son La">Son La</option>
+                  <option value="Tay Ninh">Tay Ninh</option>
+                  <option value="Thai Nguyen">Thai Nguyen</option>
+                  <option value="Thanh Hoa">Thanh Hoa</option>
+                  <option value="Tuyen Quang">Tuyen Quang</option>
+                  <option value="Vinh Long">Vinh Long</option>
+                </optgroup>
+              </select>
+              <span id="state-hint" class="form-hint"
+                >Australia: choose a state or territory. Vietnam: choose your
+                province or city.</span
+              >
+            </div>
+
+            <div class="form-row">
+              <label for="postcode">Postcode</label>
+              <input
+                type="text"
+                id="postcode"
+                name="postcode"
+                pattern="[0-9]{4,5}"
+                minlength="4"
+                maxlength="5"
+                inputmode="numeric"
+                autocomplete="postal-code"
+                aria-describedby="postcode-hint"
+                title="4 digits for Australia, 5 digits for Vietnam"
+                required
+              />
+              <span id="postcode-hint" class="form-hint"
+                >4 digits for Australia, 5 digits for Vietnam.</span
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Contact details</legend>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{8,12}"
+                minlength="8"
+                maxlength="12"
+                inputmode="numeric"
+                autocomplete="tel"
+                aria-describedby="phone-hint"
+                title="8 to 12 digits, no spaces"
+                required
+              />
+              <span id="phone-hint" class="form-hint"
+                >8 to 12 digits, no spaces.</span
+              >
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Skills</legend>
+            <p class="form-hint">
+              Tick all the skills that apply to you. HTML5 and CSS3 is required
+              for every role.
+            </p>
+
+            <div class="checkbox-options">
+              <label for="skill-html">
+                <input
+                  type="checkbox"
+                  id="skill-html"
+                  name="skills[]"
+                  value="html-css"
+                  checked
+                  required
+                />
+                HTML5 and CSS3
+              </label>
+              <label for="skill-js">
+                <input
+                  type="checkbox"
+                  id="skill-js"
+                  name="skills[]"
+                  value="javascript"
+                />
+                JavaScript
+              </label>
+              <label for="skill-ux">
+                <input
+                  type="checkbox"
+                  id="skill-ux"
+                  name="skills[]"
+                  value="ux-ui-design"
+                />
+                UX/UI design
+              </label>
+              <label for="skill-a11y">
+                <input
+                  type="checkbox"
+                  id="skill-a11y"
+                  name="skills[]"
+                  value="accessibility"
+                />
+                Web accessibility (WCAG)
+              </label>
+              <label for="skill-sql">
+                <input
+                  type="checkbox"
+                  id="skill-sql"
+                  name="skills[]"
+                  value="sql"
+                />
+                SQL and databases
+              </label>
+              <label for="skill-seo">
+                <input
+                  type="checkbox"
+                  id="skill-seo"
+                  name="skills[]"
+                  value="seo"
+                />
+                SEO
+              </label>
+              <label for="skill-catalogue">
+                <input
+                  type="checkbox"
+                  id="skill-catalogue"
+                  name="skills[]"
+                  value="product-listings"
+                />
+                Product listing management
+              </label>
+              <label for="skill-analytics">
+                <input
+                  type="checkbox"
+                  id="skill-analytics"
+                  name="skills[]"
+                  value="analytics"
+                />
+                Customer analytics
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <label for="otherskills">Other skills</label>
+            <textarea
+              id="otherskills"
+              name="otherskills"
+              rows="5"
+              placeholder="Tell us about any other skills or experience (optional)"
+            ></textarea>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit">Submit application</button>
+            <button type="reset">Reset form</button>
+          </div>
+        </form>
+      </section>
     </main>
-</body>
+
+    <footer>
+      <p>
+        <a
+          href="https://group-project-cos10026.atlassian.net/jira/software/projects/SCRUM/boards/1"
+          >Jira project</a
+        >
+        |
+        <a href="https://github.com/mo-dotcom-26/SwinBURN-Group-Projekt"
+          >GitHub repository</a
+        >
+        |
+        <a href="mailto:info@swinburn.com">info@swinburn.com</a>
+      </p>
+      <p>&copy; 2026 SwinBURN</p>
+    </footer>
+  </body>
 </html>
