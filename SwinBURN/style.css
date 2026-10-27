@@ -84,6 +84,73 @@ h1 {
     }
 }
 
+/* ==========================================================
+   index.html - Logo and hero text + table styling (Moritz)
+   ========================================================== */
+.logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.heroText {
+    color: var(--red);
+    /* Scales fluidly between 3rem (mobile) and 10rem (desktop) based on viewport width */
+    font-size: clamp(3rem, 12vw, 10rem); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.heading-image {
+    height: auto;
+    max-height: 1.2em; /* Scales nicely relative to the h1 font size */
+    width: auto;
+    vertical-align: middle;
+}
+
+#slogan{
+    max-width: 500px;
+    min-height: 50px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: var(--white);
+    border: 5px solid var(--red);
+    border-radius: 6px;
+    color: var(--grey-dark);
+}
+
+footer{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center; 
+    color: var(--grey-dark); 
+    font-size: 0.9rem; 
+    display: flex; 
+    justify-content: center; 
+    gap: 10rem; 
+    flex-wrap: wrap;
+}
+
+table{
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
+    text-align: left; 
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+tr{border-bottom: 2px solid var(--grey);}
+
+td{padding: 0.5rem;}
+
+.table-category{padding: 0.5rem; vertical-align: middle; background: var(--grey-light);}
+
 
 /* ==========================================================
    apply.html - form styles (Nhat Nam)
