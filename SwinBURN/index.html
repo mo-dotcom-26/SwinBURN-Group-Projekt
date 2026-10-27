@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- SEO and Page Information-->
+    <meta name="description" content="SwinBURN supplies university students with essential study equipment and focus tools to support their academic journey.">
+    <meta name="keywords" content="SwinBURN, university tools, study essentials, earbuds, study equipment, student gear">
+    <meta name="author" content="SwinBURN / Moritz / SWD00578">
+
+    <!-- Browser Icon-->
+    <link rel="icon" type="image/png" href="images/fire.png">
+
+    <!-- Basic Metadata--> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home | SwinBURN - Study Equipment & Tools</title>
+
+    <!-- Stylesheet-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cross Page Navigation Menu-->
     <header>
         <nav aria-label="Main navigation">
+            <img class="logo" src="images/logo.png" alt="SwinBURNLogo">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="jobs.html">Jobs</a>
@@ -17,16 +30,94 @@
     </header>
 
     <main>
-        <h1>Home Page</h1>
+        <!-- Company Name -->
+        <h1 class="heroText">SW <img src="images/burn.png" alt="flameSubtitleBURN" class="heading-image"> IN</h1>
 
-        <!-- Example boxes: replace this placeholder text with your own content. -->
-        <section class="example-box">
-            Example text box — replace or remove this.
+        <!-- Slogan -->
+        <section class="example-box" id="slogan">
+                Start burning up that pile of "todo" with SwinBURN!
         </section>
 
+        <!-- Description -->
         <section class="example-box">
-            Another example text box — customize me.
+            <div class="description">
+                <h1>What does our company provide?</h1>
+                <p>
+                    At SwinBURN we seek to aid you throughout your university journey, supplying you with all the equipment, 
+                    tools and guides you will ever need! We have everything from sleek notebooks to the highest end study
+                    earbuds so you will never have to worry about chit chatter in the library.
+                </p>
+            </div>
         </section>
+
+        <!-- Featured Example Products Table-->
+        <section class="example-box">
+            <h1>Featured Product Bundles</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Bundle Name</th>
+                        <th>Items Included</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="table-category">Study Essentials</td>
+                        <td>Starter Pack</td>
+                        <td>Sleek Notebook, Pen Set</td>
+                        <td>$15.00</td>
+                    </tr>
+                    <tr>
+                        <td>Focus Kit</td>
+                        <td>Study Earbuds, Notebook</td>
+                        <td>$45.00</td>
+                    </tr>
+                    <tr>
+                        <td class="table-category">Tech Gear</td>
+                        <td>Library Pro Bundle</td>
+                        <td>Noise-Cancelling Earbuds, Portable Charger</td>
+                        <td>$85.00</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" class="table-category">Creative Workflow</td>
+                        <td>Beginner Artist</td>
+                        <td>100pg Sketch Book, Customizable Pencil Set</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Aspiring Painter</td>
+                        <td>Easle, Quality Oil Paints, 3 Brush Combo</td>
+                        <td>$89.00</td>
+                    </tr>
+                    <tr>
+                        <td>Crafty kit</td>
+                        <td>Hot Glue Gun (glue included), Modeling Figurine, Box Cutter + Attachements</td>
+                        <td>$55.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Search Box -->
+        <section class="example-box">
+            <form action="search.html" method="GET">
+                <label for="search-input" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Find Equipment & Tools:</label>
+                <input type="text" id="search-input" name="q" placeholder="Search notebooks, earbuds..." style="padding: 0.5rem; width: 60%; max-width: 300px; border: 1px solid var(--grey); border-radius: 4px;">
+                <button type="submit" style="padding: 0.5rem 1rem; background: var(--red); color: var(--white); border: none; border-radius: 4px; cursor: pointer;">Search</button>
+            </form>
+        </section>
+
     </main>
+    
+    <!-- Footer with links to Group Projekt-->
+    <footer>
+        <div>
+            <a href="https://group-project-cos10026.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=&groupBy=none" target="_blank" style="color: var(--red); text-decoration: none;"> Jira Project |</a>
+            <a href="https://github.com/mo-dotcom-26/SwinBURN-Group-Projekt" target="_blank" style="color: var(--red); text-decoration: none;">| GitHub Repository |</a>
+            <a href="mailto:contactswinburning@gmail.com" style="color: var(--red); text-decoration: none;">| contactswinburning@gmail.com </a>
+        </div>
+    </footer>
 </body>
 </html>
