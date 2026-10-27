@@ -1,0 +1,292 @@
+/* 
+   SwinBURN - style.css
+   Shared stylesheet for all pages
+*/
+
+/* 
+    Colours   
+*/
+:root {
+  --navy: #1f3a5f;
+  --navy-dark: #162a45;
+  --blue: #2563a8;
+  --text: #222222;
+  --muted: #555555;
+  --border: #cfd6df;
+  --bg: #f4f6f972;
+  --white: #ffffff;
+}
+
+/* 
+  Reset 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Page basics 
+*/
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* 
+  Headings and text 
+*/
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+/* 
+  Header and nav 
+*/
+header {
+  background-color: var(--navy);
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 1.1rem;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  background-color: var(--navy-dark);
+  color: var(--white);
+}
+
+/* 
+  Highlights the page currently on 
+*/
+nav a[aria-current="page"] {
+  border-bottom-color: var(--white);
+  font-weight: 600;
+}
+
+/* 
+  Main content 
+*/
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+main > section {
+  margin-top: 2rem;
+}
+
+/*
+  Inclusion note box 
+*/
+.inclusion-note {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  Form 
+*/
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
+}
+
+legend {
+  font-weight: 600;
+  color: var(--navy);
+  padding: 0 0.5rem;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Clear outline when you tab to a field */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Radio buttons and checkboxes */
+.radio-group {
+  border: none;
+  padding: 0;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+.radio-group legend {
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.radio-options label,
+.checkbox-options label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.checkbox-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+/* ---------- Buttons ---------- */
+.form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid var(--navy);
+}
+
+button[type="submit"] {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--navy-dark);
+}
+
+button[type="reset"] {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+button[type="reset"]:hover {
+  background-color: var(--bg);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+/* ---------- Small screens (phones) ---------- */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    padding: 0.75rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
