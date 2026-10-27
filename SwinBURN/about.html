@@ -1,115 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | SwinBURN</title>
-  <link rel="stylesheet" href="stylesheet.css">
+    <!-- Basic document information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About the SwinBURN recruitment website project team for COS10026 Semester 2, 2026.">
+    <title>About Us | SwinBURN Careers</title>
+
+    <!-- Link to the shared Swinburne stylesheet -->
+    <link rel="stylesheet" href="stylesSwin.css">
+
+    <!-- Embedded CSS example for the About page -->
+    <style>
+        /* Embedded CSS: styles the team introduction box */
+        .team-intro {
+            background-color: #f4f7fb;
+            border-left: 6px solid #2563eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="apply.html">Apply</a></li>
-        <li><a href="about.html" aria-current="page">About Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Common navigation menu shared across all pages -->
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>About SwinBURN</h1>
+    <main>
+        <!-- Page heading -->
+        <h1>About Our Team</h1>
 
-    <section aria-labelledby="group-info">
-      <h2 id="group-info">Group Information</h2>
-      <p>SwinBURN is a student web development team creating an accessible and professional recruitment website.</p>
+        <!-- Team introduction section -->
+        <section class="team-intro" aria-labelledby="team-intro-heading">
+            <h2 id="team-intro-heading">SwinBURN Web Development Team</h2>
+            <p>
+                We are the SwinBURN project team, developing a recruitment website
+                for an e-commerce and digital retail platform. Our website aims to
+                present clear job opportunities and support an accessible application
+                process for future employees.
+            </p>
 
-      <h3>Group Name and Class Schedule</h3>
-      <ul>
-        <li>
-          Group name: SwinBURN
-          <ul>
-            <li>Class day: Saturday</li>
-            <li>Class time: 1:00 PM to 5:00 PM</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+            <!-- Inline CSS example: short highlighted statement -->
+            <p style="color: #2563eb; font-weight: bold;">
+                SwinBURN is an equal opportunity employer.
+            </p>
+        </section>
 
-    <section aria-labelledby="member-contributions">
-      <h2 id="member-contributions">Member Contributions</h2>
+        <!-- Group information section -->
+        <section aria-labelledby="group-details">
+            <h2 id="group-details">Group Information</h2>
 
-      <dl>
-        <dt>Nguyễn Nguyên Thùy Trâm</dt>
-        <dd>Created the <code>jobs.html</code> page, including realistic job advertisements, semantic headings, lists and sections.</dd>
-        <dd>
-          <blockquote>“Clear structure makes a website easier for everyone to understand.”</blockquote>
-        </dd>
+            <h3>Group Name and Class Time</h3>
 
-        <dt>Nguyễn Thanh Tuấn</dt>
-        <dd>Designed and developed <code>stylesheet.css</code> to create a consistent, accessible and responsive appearance across all pages.</dd>
-        <dd>
-          <blockquote>“Good design should support content, not distract from it.”</blockquote>
-        </dd>
+            <!-- Nested list: group details -->
+            <ul>
+                <li>
+                    Group Name: SwinBURN
+                    <ul>
+                        <li>Company: SwinBURN E-Commerce Platform</li>
+                        <li>Unit: COS10026 Web Technology Project</li>
+                        <li>Semester: Semester 2, 2026</li>
+                        <li>Class Day and Time: Saturday, 1:00 PM – 5:00 PM</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <dt>Nguyễn Nhật Nam</dt>
-        <dd>Created the <code>apply.html</code> page, including the job application form, HTML5 validation and accessible form labels.</dd>
-        <dd>
-          <blockquote>“A well-designed form helps users provide accurate information easily.”</blockquote>
-        </dd>
+        <!-- Team members, contributions and quotes section -->
+        <section aria-labelledby="member-contributions">
+            <h2 id="member-contributions">Team Members and Contributions</h2>
 
-        <dt>Nguyễn Duy Mạnh</dt>
-        <dd>Created the <code>about.html</code> page, organised group information and supported final testing and website integration.</dd>
-        <dd>
-          <blockquote>“Teamwork turns individual ideas into a complete project.”</blockquote>
-        </dd>
+            <!-- Definition list used for member details -->
+            <dl>
+                <!-- Member 1 -->
+                <dt>Nguyễn Nguyên Thùy Trâm</dt>
+                <dd>
+                    Contribution: Developed the Jobs page, including job descriptions
+                    and required HTML content.
+                </dd>
+                <dd>
+                    Quote: “Great websites are built through teamwork and attention to detail.”
+                </dd>
 
-        <dt>Moritz Campioni</dt>
-        <dd>Created the <code>index.html</code> home page, including the company introduction, navigation menu, footer and search feature.</dd>
-        <dd>
-          <blockquote>“A strong first page gives users a clear starting point.”</blockquote>
-        </dd>
-      </dl>
-    </section>
+                <!-- Member 2 -->
+                <dt>Nguyễn Thanh Tuấn</dt>
+                <dd>
+                    Contribution: Developed the website stylesheet and created the
+                    shared visual design for all pages.
+                </dd>
+                <dd>
+                    Quote: “Good design makes technology easier for everyone to use.”
+                </dd>
 
-    <section aria-labelledby="group-photo">
-      <h2 id="group-photo">Our Team</h2>
-      <figure>
-        <img src="images/group-photo.jpg" alt="The five members of SwinBURN standing together">
-        <figcaption>Figure 1: The SwinBURN team working on the recruitment website.</figcaption>
-      </figure>
-    </section>
+                <!-- Member 3 -->
+                <dt>Nguyễn Nhật Nam</dt>
+                <dd>
+                    Contribution: Developed the Apply page and implemented the job
+                    application form.
+                </dd>
+                <dd>
+                    Quote: “Every line of code is a step toward a better user experience.”
+                </dd>
 
-    <section aria-labelledby="fun-facts">
-      <h2 id="fun-facts">Fun Facts About Our Team</h2>
-      <table>
-        <caption>Table 1: Fun facts about the members of SwinBURN</caption>
-        <thead>
-          <tr>
-            <th scope="col">Member</th>
-            <th scope="col">Dream job</th>
-            <th scope="col">Coding snack</th>
-            <th scope="col">Hometown</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Nguyễn Nguyên Thùy Trâm</th><td>Web developer</td><td>Milk tea</td><td>Da Nang, Vietnam</td></tr>
-          <tr><th scope="row">Nguyễn Thanh Tuấn</th><td>UI/UX designer</td><td>Coffee</td><td>Da Nang, Vietnam</td></tr>
-          <tr><th scope="row">Nguyễn Nhật Nam</th><td>Software engineer</td><td>Instant noodles</td><td>Da Nang, Vietnam</td></tr>
-          <tr><th scope="row">Nguyễn Duy Mạnh</th><td>Data analyst</td><td>Fruit</td><td>Da Nang, Vietnam</td></tr>
-          <tr><th scope="row">Moritz Campioni</th><td>Project manager</td><td>Chocolate</td><td>Switzerland</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+                <!-- Member 4 -->
+                <dt>Nguyễn Duy Mạnh</dt>
+                <dd>
+                    Contribution: Developed the About page, including team information,
+                    member quotes, and accessibility improvements.
+                </dd>
+                <dd>
+                    Quote: “Learning together helps us build better projects.”
+                </dd>
 
-  <footer>
-    <p>
-      <a href="https://your-jira-link.atlassian.net/" target="_blank" rel="noopener">Jira Project</a> |
-      <a href="https://github.com/your-username/your-repository" target="_blank" rel="noopener">GitHub Repository</a> |
-      <a href="mailto:info@swinburn.com">info@swinburn.com</a>
-    </p>
-  </footer>
+                <!-- Member 5 -->
+                <dt>Moritz Campioni</dt>
+                <dd>
+                    Contribution: Developed the Home page, including the company
+                    introduction and main navigation structure.
+                </dd>
+                <dd>
+                    Quote: “Collaboration turns individual ideas into strong solutions.”
+                </dd>
+            </dl>
+        </section>
+
+        <!-- Team photo section -->
+        <section aria-labelledby="team-photo">
+            <h2 id="team-photo">Our Team</h2>
+
+            <!-- Figure and figcaption used for the group photo -->
+            <figure class="team-photo">
+                <img src="swinburn.jpg" alt="Group photo of the SwinBURN project team" width="600">
+                <figcaption>swinburnnn</figcaption>
+            </figure>
+        </section>
+
+        <!-- Fun facts table section -->
+        <section aria-labelledby="fun-facts">
+            <h2 id="fun-facts">Fun Facts About Our Team</h2>
+
+            <!-- Table with caption and accessible table headings -->
+            <table class="fun-facts-table">
+                <caption>Fun facts about each member of the SwinBURN team</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Member</th>
+                        <th scope="col">Dream Job</th>
+                        <th scope="col">Coding Snack</th>
+                        <th scope="col">Hometown</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Nguyễn Nguyên Thùy Trâm</th>
+                        <td>UX Designer</td>
+                        <td>Milk tea and biscuits</td>
+                        <td>Da Nang, Vietnam</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nguyễn Thanh Tuấn</th>
+                        <td>Front-end Developer</td>
+                        <td>Coffee and bread</td>
+                        <td>Ho Chi Minh City, Vietnam</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nguyễn Nhật Nam</th>
+                        <td>Full-stack Developer</td>
+                        <td>Instant noodles</td>
+                        <td>Hue, Vietnam</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nguyễn Duy Mạnh</th>
+                        <td>Web Developer</td>
+                        <td>Fruit and yoghurt</td>
+                        <td>Da Nang, Vietnam</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Moritz Campioni</th>
+                        <td>Product Manager</td>
+                        <td>Chocolate and coffee</td>
+                        <td>Melbourne, Australia</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Acknowledgement of Country section -->
+        <section aria-labelledby="acknowledgement">
+            <h2 id="acknowledgement">Acknowledgement of Country</h2>
+            <p>
+                SwinBURN acknowledges the Traditional Custodians of the lands on which
+                we live, study, and work. We pay respect to Aboriginal and Torres
+                Strait Islander Elders past and present.
+            </p>
+            <p>
+                We also encourage applications from Aboriginal and Torres Strait
+                Islander peoples and are committed to creating an inclusive and
+                respectful recruitment environment.
+            </p>
+        </section>
+    </main>
+
+    <!-- Common footer used across the website -->
+    <footer>
+        <p>&copy; 2026 SwinBURN Careers Team</p>
+    </footer>
 </body>
 </html>
