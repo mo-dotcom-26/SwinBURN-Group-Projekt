@@ -1,32 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SwinBURN</title>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="apply.html">Apply</a>
-        </nav>
-    </header>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>About Page</h1>
+  <main>
+    <h1>About SwinBURN</h1>
 
-        <!-- Example boxes: replace this placeholder text with your own content. -->
-        <section class="example-box">
-            Example text box — replace or remove this.
-        </section>
+    <section aria-labelledby="group-info">
+      <h2 id="group-info">Group Information</h2>
+      <p>SwinBURN is a student web development team creating an accessible and professional recruitment website.</p>
 
-        <section class="example-box">
-            Another example text box — customize me.
-        </section>
-    </main>
+      <h3>Group Name and Class Schedule</h3>
+      <ul>
+        <li>
+          Group name: SwinBURN
+          <ul>
+            <li>Class day: Saturday</li>
+            <li>Class time: 1:00 PM to 5:00 PM</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="member-contributions">
+      <h2 id="member-contributions">Member Contributions</h2>
+
+      <dl>
+        <dt>Nguyễn Nguyên Thùy Trâm</dt>
+        <dd>Created the <code>jobs.html</code> page, including realistic job advertisements, semantic headings, lists and sections.</dd>
+        <dd>
+          <blockquote>“Clear structure makes a website easier for everyone to understand.”</blockquote>
+        </dd>
+
+        <dt>Nguyễn Thanh Tuấn</dt>
+        <dd>Designed and developed <code>stylesheet.css</code> to create a consistent, accessible and responsive appearance across all pages.</dd>
+        <dd>
+          <blockquote>“Good design should support content, not distract from it.”</blockquote>
+        </dd>
+
+        <dt>Nguyễn Nhật Nam</dt>
+        <dd>Created the <code>apply.html</code> page, including the job application form, HTML5 validation and accessible form labels.</dd>
+        <dd>
+          <blockquote>“A well-designed form helps users provide accurate information easily.”</blockquote>
+        </dd>
+
+        <dt>Nguyễn Duy Mạnh</dt>
+        <dd>Created the <code>about.html</code> page, organised group information and supported final testing and website integration.</dd>
+        <dd>
+          <blockquote>“Teamwork turns individual ideas into a complete project.”</blockquote>
+        </dd>
+
+        <dt>Moritz Campioni</dt>
+        <dd>Created the <code>index.html</code> home page, including the company introduction, navigation menu, footer and search feature.</dd>
+        <dd>
+          <blockquote>“A strong first page gives users a clear starting point.”</blockquote>
+        </dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="group-photo">
+      <h2 id="group-photo">Our Team</h2>
+      <figure>
+        <img src="images/group-photo.jpg" alt="The five members of SwinBURN standing together">
+        <figcaption>Figure 1: The SwinBURN team working on the recruitment website.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="fun-facts">
+      <h2 id="fun-facts">Fun Facts About Our Team</h2>
+      <table>
+        <caption>Table 1: Fun facts about the members of SwinBURN</caption>
+        <thead>
+          <tr>
+            <th scope="col">Member</th>
+            <th scope="col">Dream job</th>
+            <th scope="col">Coding snack</th>
+            <th scope="col">Hometown</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Nguyễn Nguyên Thùy Trâm</th><td>Web developer</td><td>Milk tea</td><td>Da Nang, Vietnam</td></tr>
+          <tr><th scope="row">Nguyễn Thanh Tuấn</th><td>UI/UX designer</td><td>Coffee</td><td>Da Nang, Vietnam</td></tr>
+          <tr><th scope="row">Nguyễn Nhật Nam</th><td>Software engineer</td><td>Instant noodles</td><td>Da Nang, Vietnam</td></tr>
+          <tr><th scope="row">Nguyễn Duy Mạnh</th><td>Data analyst</td><td>Fruit</td><td>Da Nang, Vietnam</td></tr>
+          <tr><th scope="row">Moritz Campioni</th><td>Project manager</td><td>Chocolate</td><td>Switzerland</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="https://your-jira-link.atlassian.net/" target="_blank" rel="noopener">Jira Project</a> |
+      <a href="https://github.com/your-username/your-repository" target="_blank" rel="noopener">GitHub Repository</a> |
+      <a href="mailto:info@swinburn.com">info@swinburn.com</a>
+    </p>
+  </footer>
 </body>
 </html>
