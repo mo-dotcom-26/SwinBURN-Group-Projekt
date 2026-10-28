@@ -291,3 +291,97 @@ footer a {
   }
 }
 
+
+/*------------------------------------
+  --------Index.html specifics--------
+  ------------------------------------*/
+
+.logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+#heroText {
+    color: var(--red);
+    /* Scales fluidly between 3rem (mobile) and 10rem (desktop) based on viewport width */
+    font-size: clamp(5rem, 20vw, 15rem);
+    font-style: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.heading-image {
+    height: auto;
+    max-height: 0.9em; /* Scales nicely relative to the h1 font size */
+    width: auto;
+    vertical-align: middle;
+}
+
+#slogan{
+    margin: 1rem auto;
+    padding: 1rem;
+    background: var(--white);
+    border: 5px solid var(--red);
+    border-radius: 6px;
+    color: var(--red);
+    text-align: center; 
+}
+
+table{
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
+    text-align: left; 
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-top: 2px solid var(--navy-dark);
+    border-left: 2px solid var(--navy-dark);
+    border-right: 2px solid var(--navy-dark);
+}
+
+tr{
+    border-bottom: 2px solid var(--navy-dark);
+    border-left: 2px solid var(--navy-dark);
+}
+
+th{
+    border-left: 2px solid var(--navy-dark);
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.5rem; 
+}
+
+td{
+    padding: 0.5rem;
+    border-left: 2px solid var(--navy-dark);
+}
+
+.table-category{
+    padding: 0.5rem; 
+    vertical-align: middle; 
+    background: var(--muted);
+    color: var(--white);
+    border-bottom: 2px solid var(--navy-dark);
+    border-top: 2px solid var(--navy-dark);
+}
+
+input[type="search"]{
+    width: 50%;
+    padding: 0.6rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+button[type="search"] {
+    background-color: var(--navy);
+    color: var(--white);
+    justify-self: right;
+}
