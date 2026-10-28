@@ -7,14 +7,14 @@
     Colours   
 */
 :root {
-  --navy: #1f3a5f;
-  --navy-dark: #162a45;
-  --blue: #2563a8;
-  --text: #222222;
-  --muted: #555555;
-  --border: #cfd6df;
-  --bg: #f4f6f972;
-  --white: #ffffff;
+   --navy: #1f3a5f;
+   --navy-dark: #162a45;
+   --blue: #2563a8;
+   --text: #222222;
+   --muted: #555555;
+   --border: #cfd6df;
+   --bg: #f4f6f972;
+   --white: #ffffff;
    --red: #B63831;
 }
 
