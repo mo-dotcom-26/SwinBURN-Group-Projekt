@@ -584,16 +584,23 @@
             </div>
           </fieldset>
 
-          <!-- Other skills: the only optional field (a textarea, so no "required") -->
-          <div class="form-row">
-            <label for="otherskills">Other skills</label>
-            <textarea
-              id="otherskills"
-              name="otherskills"
-              rows="5"
-              placeholder="Tell us about any other skills or experience (optional)"
-            ></textarea>
-          </div>
+          <!--
+            Other skills: the only optional field (a textarea, so no "required").
+            It sits in its own fieldset with a legend so its heading looks the
+            same as the other groups (Skills, Contact details, and so on).
+          -->
+          <fieldset class="form-section">
+            <legend>Other skills</legend>
+            <div class="form-row">
+              <label for="otherskills">Describe your other skills</label>
+              <textarea
+                id="otherskills"
+                name="otherskills"
+                rows="5"
+                placeholder="Tell us about any other skills or experience (optional)"
+              ></textarea>
+            </div>
+          </fieldset>
 
           <!-- Buttons: submit sends the form, reset clears every field -->
           <div class="form-buttons">
