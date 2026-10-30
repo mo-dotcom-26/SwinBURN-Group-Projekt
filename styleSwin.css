@@ -476,9 +476,9 @@ button:hover {
 }
 
 /* ==========================================================
-   THEME OVERRIDE - background and red accents (all pages)
+   THEME OVERRIDE - background (all pages) - Nhat Nam
    Replaces the animated blue/red gradient so text is easier
-   to read. - Nhat Nam
+   to read. 
    ========================================================== */
 
 /* Calm warm background, no animation */
@@ -512,4 +512,124 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #8f2b26;
   border-color: #8f2b26;
+}
+
+/* ==========================================================
+   LOGO LINK (all pages) - Nhat Nam
+   The logo is now a link back to index.html (Home page).
+   ========================================================== */
+
+nav a.logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+/* No highlight box on hover, the logo should stay clean */
+nav a.logo-link:hover {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* White focus ring so keyboard users can see it on the dark header */
+nav a.logo-link:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================
+   JOBS PAGE STYLES - jobs.html only
+   Page written by Tram, spacing and form tidy-up by Nhat Nam
+   ========================================================== */
+
+/* ---------- Job cards ---------- */
+
+/* Each role is one block. flow-root makes the card contain the floated aside.
+   The line and the space under the card separate one role from the next. */
+.job-card {
+  display: flow-root;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.job-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.job-ref {
+  margin-bottom: 1rem;
+}
+
+/* Section labels ("What you will do:" and so on):
+   one blank line above, no gap below so the label stays joined to its list,
+   the same way "About the role:" is joined to its text. */
+.job-label {
+  margin: 1.5rem 0 0;
+}
+
+/* ---------- Aside (quote): floated right, 25% wide ---------- */
+.job-card aside {
+  float: right;
+  width: 25%;
+  margin: 0 0 1rem 1.5rem;
+  padding: 1rem;
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  background-color: var(--white);
+  font-size: 0.9rem;
+}
+
+.job-card aside p {
+  margin-bottom: 0;
+}
+
+/* ---------- Application form on the jobs page ---------- */
+
+.job-form-section h2 {
+  margin-bottom: 1.25rem;
+}
+
+/* White background behind the legend so the box border does not run through the title */
+.job-form legend {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 0 0.6rem;
+}
+
+/* Date and file boxes get the same look as the other boxes */
+.job-form input[type="date"],
+.job-form input[type="file"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+
+/* Small headings above the radio buttons and checkboxes */
+.job-form .group-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Radio buttons and checkboxes sit side by side instead of one per line */
+.job-form .choice {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0 1.5rem 0.25rem 0;
+}
+
+/* ---------- Small screens: aside goes full width ---------- */
+@media (max-width: 600px) {
+  .job-card aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem;
+  }
 }
