@@ -74,6 +74,11 @@ a:hover {
   color: var(--navy);
 }
 
+footer a:hover {
+  color: #ffb4ae;
+  text-decoration-thickness: 2px;
+}
+
 /* 
   Header and nav 
 */
