@@ -7,23 +7,23 @@ All AI-generated code was reviewed and modified by the author before use. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jobs.html</title>
+    <link rel="stylesheet" href="styleSwin.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
-      <img src="images/logo.png" alt="Company Logo" width="100" height="100">
-      <h1>SwinBURN</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="jobs.html" class="active">Jobs</a></li>
-          <li><a href="apply.html">Apply</a></li>
-        </ul>
+      <nav aria-label="Main navigation">
+      <img src="images/logo.png" alt="SwinBURNlogo" width="100" height="100">
+      <!--subjectively, <ul> and <li> tag will help keep the semantic structure, not flat anchor for main page. but since the 2nd peer-review within the group said i should change the header by copying it from the home page and edit it to be unique to me, so this comment here is to resolve the conflict.-->
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="jobs.html" aria-current="page">Jobs</a>
+          <a href="apply.html">Apply</a>
       </nav>
-      <p>We are an online retail platform expanding its technical and user experience teams to enhance customer facing websites, product listings, and online application workflows.</p>
-      <p>We are looking for individuals who are <em>talented</em> yet <em>bright</em> and <em>possess the learning capacity</em> as important as <em>executing tasks effectively</em> can bring to the table.</p>
     </header>
-    <main>
+    <main id="main">
+      <h1>Jobs at SwinBURN</h1>
+      <p>Join team behind study gear, product listings, online workflows.</p>
       <div class="page">
         <section>
           <h2>Open roles:</h2>
@@ -198,6 +198,7 @@ All AI-generated code was reviewed and modified by the author before use. -->
             <p>
               <label><input type="radio" name="mode" value="onsite" required> On-site</label>
               <label><input type="radio" name="mode" value="remote"> Remote</label>
+              <label><input type="radio" name="mode" value="hybrid"> Hybrid</label>
             </p>
             <p>Key skills (select all that apply):</p>
             <p>
@@ -205,6 +206,12 @@ All AI-generated code was reviewed and modified by the author before use. -->
               <label><input type="checkbox" name="skills" value="technical"> Technical</label>
               <label><input type="checkbox" name="skills" value="leadership"> Leadership</label>
             </p>
+            <p>Are you considering internship?</p>
+            <p>
+              <label><input type="radio" name="internship" value="yes" required> Yes</label>
+              <label><input type="radio" name="internship" value="no"> No</label>
+            </p>
+            <p><strong>Note:</strong> internship for the first 2 months will receive no salary but may be considered for the main position once the critical assessment is passed through and marked as "successful internship".</p>
           </fieldset>
           <p>
             <label for="cover">Cover letter</label>
@@ -222,12 +229,20 @@ All AI-generated code was reviewed and modified by the author before use. -->
       </section>
     </main>
     <footer>
+      <nav aria-label="Footer">
+        <ul style="display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+        </ul>
+      </nav>
       <h2>How to apply</h2>
       <ol>
         <li>Email resume and cover letter to <a href="mailto:SwinBURNrecruitment@gmail.com">SwinBURNrecruitment@gmail.com</a></li>
         <li>Include job reference number in subject line</li>
       </ol>
-      <p>Questions: <a href="mailto:SwinBURNAssisstance@gmail.com">SwinBURNAssisstance@gmail.com</a>.</p>
+      <p>Any questions related to the interview please contact us via: <a href="mailto:SwinBURNAssisstance@gmail.com">SwinBURNAssisstance@gmail.com</a>.</p>
       <p>Posted: <time id="posted" datetime="">...</time>. Closing: <time id="closing" datetime="2026-11-30">...</time>.</p>
     </footer>
     <script>
