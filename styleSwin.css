@@ -394,7 +394,7 @@ button[type="search"] {
 
 /* 1. Animated background */
 body {
-  background: linear-gradient(-45deg, #e3ecf9, #bcd3f0, #f6cfcb, #cfdff3);
+  background: linear-gradient(-45deg, #a9c6ec, #6f9bd6, #ee928b, #8fb3e3);
   background-size: 400% 400%;
   animation: bgShift 20s ease infinite;
 }
