@@ -454,3 +454,23 @@ button:hover {
   transform: translateY(-2px);
 }
 
+/* ==========================================================
+   APPLY PAGE STYLES - Nhat Nam (apply.html only)
+   ========================================================== */
+
+/* Space between the form heading and the first box */
+#form-heading {
+  margin-bottom: 1.25rem;
+}
+
+/* Legend gets a white background so the border does not run through the text */
+.form-section legend {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 0 0.6rem;
+}
+
+/* Hint text under fields: a little larger so it is easy to read */
+.form-hint {
+  font-size: 0.9rem;
+}
