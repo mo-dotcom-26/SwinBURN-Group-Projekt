@@ -483,7 +483,7 @@ button:hover {
 
 /* Calm warm background, no animation */
 body {
-  background: #faf6f4;
+  background: linear-gradient(180deg, #fff3f1, #f1f5fa);;
   animation: none;
 }
 
