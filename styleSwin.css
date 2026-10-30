@@ -1,6 +1,6 @@
 /* 
-   SwinBURN - style.css
-   Shared stylesheet for all pages
+   SwinBURN - style.css - Tuan
+   Shared style for all pages
 */
 
 /* 
@@ -223,7 +223,9 @@ input[type="checkbox"] {
   margin-right: 0.4rem;
 }
 
-/* ---------- Buttons ---------- */
+/* 
+   Buttons 
+*/
 .form-buttons {
   display: flex;
   gap: 0.75rem;
@@ -257,7 +259,9 @@ button[type="reset"]:hover {
   background-color: var(--bg);
 }
 
-/* ---------- Footer ---------- */
+/* 
+   Footer 
+*/
 footer {
   background-color: var(--navy);
   color: var(--white);
@@ -273,7 +277,9 @@ footer a {
   color: var(--white);
 }
 
-/* ---------- Small screens (phones) ---------- */
+/* 
+   Small screens (phones) 
+*/
 @media (max-width: 600px) {
   h1 {
     font-size: 1.6rem;
@@ -392,7 +398,7 @@ button[type="search"] {
   --------Dynamic effects-------------
   ------------------------------------*/
 
-/* 1. Animated background */
+/* Animated background, kind of */
 body {
   background: linear-gradient(-45deg, #a9c6ec, #6f9bd6, #ee928b, #8fb3e3);
   background-size: 400% 400%;
@@ -405,7 +411,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* 2. Ember-glow hero text */
+/* Glow SWIN text */
 #heroText {
   animation: emberGlow 3s ease-in-out infinite;
 }
@@ -448,10 +454,3 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Respect users who turn off animations in their system settings */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}
