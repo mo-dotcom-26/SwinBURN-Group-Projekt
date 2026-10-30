@@ -1,0 +1,640 @@
+/* 
+   SwinBURN - style.css - Tuan
+   Shared style for all pages
+*/
+
+/* 
+    Colours   
+*/
+:root {
+   --navy: #1f3a5f;
+   --navy-dark: #162a45;
+   --blue: #2563a8;
+   --text: #222222;
+   --muted: #555555;
+   --border: #cfd6df;
+   --bg: #f4f6f972;
+   --white: #ffffff;
+   --red: #B63831;
+}
+
+/* 
+  Reset 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Page basics 
+*/
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* 
+  Headings and text 
+*/
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+footer a:hover {
+  color: #ffb4ae;
+  text-decoration-thickness: 2px;
+}
+
+/* 
+  Header and nav 
+*/
+header {
+  background-color: var(--navy);
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 1.1rem;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  background-color: var(--navy-dark);
+  color: var(--white);
+}
+
+/* 
+  Highlights the page currently on 
+*/
+nav a[aria-current="page"] {
+  border-bottom-color: var(--white);
+  font-weight: 600;
+}
+
+/* 
+  Main content 
+*/
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+main > section {
+  margin-top: 2rem;
+}
+
+/*
+  Inclusion note box 
+*/
+.inclusion-note {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*
+  Form 
+*/
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--white);
+}
+
+legend {
+  font-weight: 600;
+  color: var(--navy);
+  padding: 0 0.5rem;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Clear outline when you tab to a field */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Radio buttons and checkboxes */
+.radio-group {
+  border: none;
+  padding: 0;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+.radio-group legend {
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.radio-options label,
+.checkbox-options label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.checkbox-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+/* 
+   Buttons 
+*/
+.form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid var(--navy);
+}
+
+button[type="submit"] {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--navy-dark);
+}
+
+button[type="reset"] {
+  background-color: var(--white);
+  color: var(--navy);
+}
+
+button[type="reset"]:hover {
+  background-color: var(--bg);
+}
+
+/* 
+   Footer 
+*/
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+footer p {
+  margin-bottom: 0.25rem;
+}
+
+footer a {
+  color: var(--white);
+}
+
+/* 
+   Small screens (phones) 
+*/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  nav a {
+    padding: 0.75rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+/*------------------------------------
+  --------Index.html specifics--------
+  ------------------------------------*/
+
+.logo {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+#heroText {
+    color: var(--red);
+    /* Scales fluidly between 3rem (mobile) and 10rem (desktop) based on viewport width */
+    font-size: clamp(5rem, 20vw, 15rem);
+    font-style: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.heading-image {
+    height: auto;
+    max-height: 0.9em; /* Scales nicely relative to the h1 font size */
+    width: auto;
+    vertical-align: middle;
+}
+
+#slogan{
+    margin: 1rem auto;
+    padding: 1rem;
+    background: var(--white);
+    border: 5px solid var(--red);
+    border-radius: 6px;
+    color: var(--red);
+    text-align: center; 
+}
+
+table{
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 1rem; 
+    text-align: left; 
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-top: 2px solid var(--navy-dark);
+    border-left: 2px solid var(--navy-dark);
+    border-right: 2px solid var(--navy-dark);
+}
+
+tr{
+    border-bottom: 2px solid var(--navy-dark);
+    border-left: 2px solid var(--navy-dark);
+}
+
+th{
+    border-left: 2px solid var(--navy-dark);
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.5rem; 
+}
+
+td{
+    padding: 0.5rem;
+    border-left: 2px solid var(--navy-dark);
+}
+
+.table-category{
+    padding: 0.5rem; 
+    vertical-align: middle; 
+    background: var(--muted);
+    color: var(--white);
+    border-bottom: 2px solid var(--navy-dark);
+    border-top: 2px solid var(--navy-dark);
+}
+
+input[type="search"]{
+    width: 50%;
+    padding: 0.6rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+button[type="search"] {
+    background-color: var(--navy);
+    color: var(--white);
+    justify-self: right;
+}
+
+
+/*------------------------------------
+  --------Dynamic effects-------------
+  ------------------------------------*/
+
+/* Animated background, kind of */
+body {
+  background: linear-gradient(-45deg, #a9c6ec, #6f9bd6, #ee928b, #8fb3e3);
+  background-size: 400% 400%;
+  animation: bgShift 20s ease infinite;
+}
+
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow SWIN text */
+#heroText {
+  animation: emberGlow 3s ease-in-out infinite;
+}
+
+@keyframes emberGlow {
+  0%, 100% {
+    color: var(--red);
+    text-shadow: 0 0.03em 0 var(--navy-dark), 0 0 0 rgba(255, 190, 0, 0);
+  }
+  50% {
+    color: #ff7a1a;
+    text-shadow: 0 0.03em 0 var(--navy-dark), 0 0 0.35em rgba(255, 200, 0, 0.9);
+  }
+}
+
+/* 3. Nav hover underline */
+nav a {
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+  border-bottom-color: var(--red);
+}
+
+/* 4. Table row highlight */
+td {
+  transition: background-color 0.25s;
+}
+
+tbody tr:hover td:not(.table-category) {
+  background-color: #e8f0fa;
+}
+
+/* 5. Button lift */
+button {
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   APPLY PAGE STYLES - Nhat Nam (apply.html only)
+   ========================================================== */
+
+/* Space between the form heading and the first box */
+#form-heading {
+  margin-bottom: 1.25rem;
+}
+
+/* Legend gets a white background so the border does not run through the text */
+.form-section legend {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 0 0.6rem;
+}
+
+/* Hint text under fields: a little larger so it is easy to read */
+.form-hint {
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   THEME OVERRIDE - background (all pages) - Nhat Nam
+   Replaces the animated blue/red gradient so text is easier
+   to read. 
+   ========================================================== */
+
+/* Calm warm background, no animation */
+body {
+  background: linear-gradient(180deg, #fff3f1, #f1f5fa);;
+  animation: none;
+}
+
+/* Red line under the header ties the page to the team colour */
+header {
+  border-bottom: 4px solid var(--red);
+}
+
+/* Soft shadow so white boxes stand out from the light background */
+fieldset,
+.inclusion-note {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Red legends so form group titles match the team colour */
+legend {
+  color: var(--red);
+}
+
+/* Submit button in the team red */
+button[type="submit"] {
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+button[type="submit"]:hover {
+  background-color: #8f2b26;
+  border-color: #8f2b26;
+}
+
+/* ==========================================================
+   LOGO LINK (all pages) - Nhat Nam
+   The logo is now a link back to index.html (Home page).
+   ========================================================== */
+
+nav a.logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+/* No highlight box on hover, the logo should stay clean */
+nav a.logo-link:hover {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* White focus ring so keyboard users can see it on the dark header */
+nav a.logo-link:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================
+   JOBS PAGE STYLES - jobs.html only
+   Page written by Tram, spacing and form tidy-up by Nhat Nam
+   ========================================================== */
+
+/* ---------- Job cards ---------- */
+
+/* Each role is one block. flow-root makes the card contain the floated aside.
+   The line and the space under the card separate one role from the next. */
+.job-card {
+  display: flow-root;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.job-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.job-ref {
+  margin-bottom: 1rem;
+}
+
+/* Section labels ("What you will do:" and so on):
+   one blank line above, no gap below so the label stays joined to its list,
+   the same way "About the role:" is joined to its text. */
+.job-label {
+  margin: 1.5rem 0 0;
+}
+
+/* ---------- Aside (quote): floated right, 25% wide ---------- */
+.job-card aside {
+  float: right;
+  width: 25%;
+  margin: 0 0 1rem 1.5rem;
+  padding: 1rem;
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  background-color: var(--white);
+  font-size: 0.9rem;
+}
+
+.job-card aside p {
+  margin-bottom: 0;
+}
+
+/* ---------- Application form on the jobs page ---------- */
+
+.job-form-section h2 {
+  margin-bottom: 1.25rem;
+}
+
+/* White background behind the legend so the box border does not run through the title */
+.job-form legend {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 0 0.6rem;
+}
+
+/* Date and file boxes get the same look as the other boxes */
+.job-form input[type="date"],
+.job-form input[type="file"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--white);
+}
+
+/* Small headings above the radio buttons and checkboxes */
+.job-form .group-label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Radio buttons and checkboxes sit side by side instead of one per line */
+.job-form .choice {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0 1.5rem 0.25rem 0;
+}
+
+/* ---------- Small screens: aside goes full width ---------- */
+@media (max-width: 600px) {
+  .job-card aside {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem;
+  }
+}
