@@ -474,3 +474,42 @@ button:hover {
 .form-hint {
   font-size: 0.9rem;
 }
+
+/* ==========================================================
+   THEME OVERRIDE - background and red accents (all pages)
+   Replaces the animated blue/red gradient so text is easier
+   to read.
+   ========================================================== */
+
+/* Calm warm background, no animation */
+body {
+  background: #faf6f4;
+  animation: none;
+}
+
+/* Red line under the header ties the page to the team colour */
+header {
+  border-bottom: 4px solid var(--red);
+}
+
+/* Soft shadow so white boxes stand out from the light background */
+fieldset,
+.inclusion-note {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Red legends so form group titles match the team colour */
+legend {
+  color: var(--red);
+}
+
+/* Submit button in the team red */
+button[type="submit"] {
+  background-color: var(--red);
+  border-color: var(--red);
+}
+
+button[type="submit"]:hover {
+  background-color: #8f2b26;
+  border-color: #8f2b26;
+}
