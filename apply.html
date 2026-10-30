@@ -34,6 +34,33 @@
         font-size: 0.85rem;
         color: #555555;
       }
+
+      /* Date of birth: day, month and year boxes sit side by side (Flexbox) */
+      .dob-fields {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+      }
+
+      /* Day and month boxes are short, the year box a bit wider */
+      .dob-item {
+        flex: 0 1 6rem;
+      }
+
+      .dob-item:last-child {
+        flex-basis: 8rem;
+      }
+
+      /* Number boxes use the same look as the other text boxes */
+      .dob-item input[type="number"] {
+        width: 100%;
+        padding: 0.6rem 0.75rem;
+        font-family: inherit;
+        font-size: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background-color: var(--white);
+      }
     </style>
   </head>
   <body>
@@ -154,7 +181,7 @@
                 pattern="[A-Za-z0-9]{5}"
                 maxlength="5"
                 minlength="5"
-                placeholder="e.g. EC001"
+                placeholder="e.g. MKT01"
                 aria-describedby="jobref-hint"
                 title="Exactly 5 letters or numbers"
                 required
@@ -214,27 +241,66 @@
             </div>
 
             <!--
-              Date of birth in the format dd/mm/yyyy.
-              type="text" is used instead of type="date" because the date input
-              shows a different format depending on the browser, but the brief
-              needs dd/mm/yyyy.
-              Pattern: day 01-31, then "/", month 01-12, then "/", then 4 digits.
+              Date of birth in the order dd/mm/yyyy.
+              The date is typed as numbers in three separate boxes (day, month,
+              year), so the visitor never has to type the "/" characters and the
+              order is the same on every browser (type="date" changes its order
+              depending on the browser language).
+              Each box is type="number" with min and max, so the browser checks
+              the ranges: day 1-31, month 1-12, year 1900-2026.
+              The three boxes are grouped in a fieldset with a legend, like the
+              Gender group below. The layout (.dob-fields) is in the embedded CSS.
             -->
-            <div class="form-row">
-              <label for="dob">Date of birth</label>
-              <input
-                type="text"
-                id="dob"
-                name="dob"
-                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
-                maxlength="10"
-                placeholder="dd/mm/yyyy"
-                aria-describedby="dob-hint"
-                title="Use the format dd/mm/yyyy"
-                required
-              />
-              <span id="dob-hint" class="form-hint">Format: dd/mm/yyyy</span>
-            </div>
+            <fieldset class="form-row radio-group">
+              <legend>Date of birth (dd/mm/yyyy)</legend>
+              <div class="dob-fields">
+                <div class="dob-item">
+                  <label for="dob-day">Day</label>
+                  <input
+                    type="number"
+                    id="dob-day"
+                    name="dob_day"
+                    min="1"
+                    max="31"
+                    placeholder="dd"
+                    inputmode="numeric"
+                    autocomplete="bday-day"
+                    title="Day: a number from 1 to 31"
+                    required
+                  />
+                </div>
+                <div class="dob-item">
+                  <label for="dob-month">Month</label>
+                  <input
+                    type="number"
+                    id="dob-month"
+                    name="dob_month"
+                    min="1"
+                    max="12"
+                    placeholder="mm"
+                    inputmode="numeric"
+                    autocomplete="bday-month"
+                    title="Month: a number from 1 to 12"
+                    required
+                  />
+                </div>
+                <div class="dob-item">
+                  <label for="dob-year">Year</label>
+                  <input
+                    type="number"
+                    id="dob-year"
+                    name="dob_year"
+                    min="1900"
+                    max="2026"
+                    placeholder="yyyy"
+                    inputmode="numeric"
+                    autocomplete="bday-year"
+                    title="Year: a four-digit number, for example 2003"
+                    required
+                  />
+                </div>
+              </div>
+            </fieldset>
 
             <!--
               Gender: radio buttons grouped in a fieldset with a legend
