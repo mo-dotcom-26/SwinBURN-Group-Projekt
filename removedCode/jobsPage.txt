@@ -1,3 +1,7 @@
+==========================
+====== Removed FORM ======
+==========================
+
       <section class="job-form-section">
         <h2>Job application process</h2>
         <form id="job-form" class="job-form" action="mailto:SwinBURNrecruitment@gmail.com" method="post" enctype="text/plain">
@@ -67,3 +71,21 @@
           </p>
         </form>
       </section>
+
+
+
+
+============================
+====== Removed FOOTER ======
+============================
+
+
+    <footer>
+      <h2>How to apply</h2>
+      <ol>
+        <li>Email resume and cover letter to <a href="mailto:SwinBURNrecruitment@gmail.com">SwinBURNrecruitment@gmail.com</a></li>
+        <li>Include job reference number in subject line</li>
+      </ol>
+      <p>Questions: <a href="mailto:SwinBURNAssisstance@gmail.com">SwinBURNAssisstance@gmail.com</a>.</p>
+      <p>Posted: <time id="posted" datetime="">...</time>. Closing: <time id="closing" datetime="2026-11-30">...</time>.</p>
+    </footer>
