@@ -247,12 +247,14 @@ button {
   border: 2px solid var(--navy);
 }
 
-button[type="submit"] {
+button[type="submit"],
+button[type="post"]{
   background-color: var(--navy);
   color: var(--white);
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+button[type="post"]:hover{
   background-color: var(--navy-dark);
 }
 
